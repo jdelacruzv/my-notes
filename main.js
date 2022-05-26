@@ -31,17 +31,15 @@ const acceptData = () => {
 const createNotes = () => {
 	notes.innerHTML = "";
 	data.map((note, index) => {
-		return (
-			notes.innerHTML += `
+		return (notes.innerHTML += `
 			<div class="notes" id=${index}>
 				<div class="notes__text">${note.text}</div>
-				<div class="icons">
-					<img class="icon" src="/img/edit_note.svg" onclick="editNotes(this)" title="Edit" alt="Edit" />
-					<img class="icon" src="/img/delete.svg" onclick="deleteNotes(this)" title="Delete" alt="Delete" />
+				<div class="buttons">
+					<button class="btn btn--blue btn--small" type="button" onclick="editNotes(this)">Edit</button>
+					<button class="btn btn--red btn--small" type="button" onclick="deleteNotes(this)">Delete</button>
 				</div>
 			</div>
-			`
-		);
+			`);
 	});
 	resetText();
 };
