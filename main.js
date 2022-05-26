@@ -69,7 +69,7 @@ const editNotes = (e) => {
 
 // Función autoinvocada
 (() => {
-	data = JSON.parse(localStorage.getItem("note")) || {};
+	data = JSON.parse(localStorage.getItem("note")) || [];
 	console.log(data);
 	createNotes();
 })();
