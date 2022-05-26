@@ -33,8 +33,8 @@ const createNotes = () => {
 	data.map((note, index) => {
 		return (
 			notes.innerHTML += `
-			<div class="notes-row" id=${index}>
-				<span>${note.text}</span>
+			<div class="notes" id=${index}>
+				<div class="notes__text">${note.text}</div>
 				<div class="icons">
 					<img class="icon" src="/img/edit_note.svg" onclick="editNotes(this)" title="Edit" alt="Edit" />
 					<img class="icon" src="/img/delete.svg" onclick="deleteNotes(this)" title="Delete" alt="Delete" />

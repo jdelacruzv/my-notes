@@ -25,23 +25,22 @@ body {
 	flex-wrap: wrap;
   gap: 25px;
 	padding: 3em 1rem;
+	margin: auto;
 }
 
 .form,
 .list {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 	gap: 0.5em;
-}
-
-.form {
 	width: 100%;
-	max-width: 450px;
 	margin: auto;
 }
 
 .form__input {
-	padding: 0.5rem;
+	width: 100%;
+	margin: 0 auto;
 }
 
 .form__input:focus {
@@ -58,7 +57,7 @@ body {
 .form__add {
 	font-size: 1rem;
 	padding: 0.8em 2rem;
-	margin: 0 auto;
+	margin: 0 0 1rem 0;
 	background-color: #2F3136;
 	color: #ffffff;
 	border: 1px solid #d0d0d5;
@@ -66,22 +65,25 @@ body {
 	cursor: pointer;
 }
 
-.list__title {
-	margin: 0;
-}
-
 .list__notes {
-	width: 90vw;
+	width: 100%;
 }
 
-.notes-row {
+.notes {
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
 	padding: 0.8rem 1rem;
 	border: 1px solid #d0d0d5;
 	border-radius: 5px;
-	margin-bottom: 0.5rem;
+	margin-bottom: 1rem;
+}
+
+.notes__text {
+	width: 100%;
+	margin-bottom: 1rem;
+	overflow: hidden;
 }
 
 .icons {
@@ -94,22 +96,28 @@ body {
   cursor: pointer;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 700px) {
 	.container {
 		flex-direction: row;
 		justify-content: center;
 	}
 
 	.form {
-		width: 40%;
+		width: 50%;
 		margin: 0;
 	}
 
-	.list {
-		width: 35%;
+	.form__input {		
+		margin-right: 2rem;
 	}
 
-	.list__notes {
-		width: 35vw;
+	.list {
+		width: 45%;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.container {
+		width: 80vw;
 	}
 }
